@@ -1,6 +1,7 @@
 import React from "react"
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client"
-import fetch from "cross-fetch"
+// import fetch from "cross-fetch"
+import fetch from "isomorphic-fetch"
 
 const client = new ApolloClient({
   fetch,
