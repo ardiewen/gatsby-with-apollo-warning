@@ -1,18 +1,11 @@
 import React from "react"
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  HttpLink,
-} from "@apollo/client"
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client"
 import fetch from "cross-fetch"
 
 const client = new ApolloClient({
+  fetch,
+  uri: "https://countries.trevorblades.com",
   cache: new InMemoryCache(),
-  link: new HttpLink({
-    uri: "https://countries.trevorblades.com",
-    fetch,
-  }),
 })
 
 const wrapRootElement = ({ element }) => (
