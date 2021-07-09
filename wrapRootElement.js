@@ -5,7 +5,7 @@ import {
   InMemoryCache,
   HttpLink,
 } from "@apollo/client"
-import fetch from "cross-fetch"
+import fetch from "isomorphic-fetch"
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
